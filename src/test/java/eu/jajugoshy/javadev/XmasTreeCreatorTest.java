@@ -1,4 +1,4 @@
-package com.pgs.javadev;
+package eu.jajugoshy.javadev;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -17,13 +17,13 @@ public class XmasTreeCreatorTest {
 
     @Test
     public void testSingleRow() {
-        String tree = xmasTreeCreator.createXmasTree("x", 1);
+        String tree = xmasTreeCreator.createXmasTree("x", 1, "top");
         assertThat(tree, equalTo("x"));
     }
 
     @Test
     public void testEvenRow() {
-        String tree = xmasTreeCreator.createXmasTree("x", 2);
+        String tree = xmasTreeCreator.createXmasTree("x", 2, "top");
         assertThat(tree, equalTo(
                 " x\n" +
                 "xxx"));
@@ -31,11 +31,11 @@ public class XmasTreeCreatorTest {
 
     @Test
     public void testOddRow() {
-        String tree = xmasTreeCreator.createXmasTree("x", 3);
+        String tree = xmasTreeCreator.createXmasTree("x", 3, "right");
         assertThat(tree, equalTo(
-                "  x\n" +
-                " xxx\n" +
-                "xxxxx"));
+                "x\n" +
+                "xxx\n" +
+                "x"));
     }
 
 }

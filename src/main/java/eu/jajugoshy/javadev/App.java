@@ -18,8 +18,7 @@ public class App {
         String side=null;
         side = sc.next();
         if(side.equals("") || side==null) side = "top";
-       System.out.println(creator.createXmasTree(text,count,side));
-        System.out.println(creator.createXmasTree("*",5,"right"));
+        System.out.println(creator.createXmasTree(text,count,side));
     }
 
 }
